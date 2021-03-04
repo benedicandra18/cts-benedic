@@ -9,11 +9,19 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
-public class AngajatReader {
+//principiul single resposability
+public class AngajatReader extends Reader{
 	
+	
+	
+	public AngajatReader(String filename) {
+		super(filename);
+		
+	}
+
 	//principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de cea concreta
-	public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	public List<Aplicant> readAplicants() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.filename));
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
