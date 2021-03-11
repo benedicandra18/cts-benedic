@@ -14,10 +14,6 @@ public class UniversalReader {
 	//fol ca punct de legatura catre readere
 
 	public static List<Aplicant> readAplicants(Reader reader) throws FileNotFoundException{
-		
 		return reader.readAplicants();
-		
 	}
-
-
 }

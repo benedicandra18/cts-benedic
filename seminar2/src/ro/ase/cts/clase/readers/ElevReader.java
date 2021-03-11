@@ -12,11 +12,8 @@ import ro.ase.cts.clase.Elev;
 //am adaugat un nivel abstract
 public class ElevReader extends Reader{
 	
-	
-	
 	public ElevReader(String filename) {
 		super(filename);
-		// TODO Auto-generated constructor stub
 	}
 
 	//principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de cea concreta
@@ -38,6 +35,4 @@ public class ElevReader extends Reader{
 		input2.close();
 		return elevi;
 	}
-
-
 }

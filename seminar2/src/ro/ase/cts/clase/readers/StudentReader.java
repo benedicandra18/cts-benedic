@@ -11,10 +11,8 @@ import ro.ase.cts.clase.Student;
 
 public class StudentReader extends Reader {
 	
-	
 	public StudentReader(String filename) {
 		super(filename);
-		// TODO Auto-generated constructor stub
 	}
 
 	//principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de cea concreta
@@ -35,5 +33,4 @@ public class StudentReader extends Reader {
 		input.close();
 		return studenti;
 	}
-
 }

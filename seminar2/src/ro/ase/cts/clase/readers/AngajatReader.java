@@ -14,7 +14,6 @@ public class AngajatReader extends Reader{
 	
 	public AngajatReader(String filename) {
 		super(filename);
-		
 	}
 
 	//principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de cea concreta
@@ -35,5 +34,4 @@ public class AngajatReader extends Reader{
 		input2.close();
 		return angajati;
 	}
-
 }
