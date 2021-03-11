@@ -39,9 +39,18 @@ public abstract class Aplicant{
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
+		
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
+	public void setDenumireProiect(String[] denumireProiect) {
+		this.denumireProiect = denumireProiect;
+	}
 	
-	
-
+	public void setDenumiriProiecte(String[] denumiriProiecte, int nrProiecte) {
+		this.nr_proiecte = nrProiecte;
+		this.denumireProiect = denumiriProiecte;
+	}
 	
 	public Aplicant() {
 		super();
