@@ -15,7 +15,5 @@ public class Proiect {
 	public void setPragPunctaj(int pragPunctaj) {
 		this.pragPunctaj = pragPunctaj;
 	}
-	
-	
 
 }

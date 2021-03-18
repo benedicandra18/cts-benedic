@@ -1,6 +1,5 @@
 package ro.ase.cts.program;
 
-
 import java.io.FileNotFoundException;
 import java.util.List;
 
@@ -17,18 +16,18 @@ public class Program {
 
 	public static void main(String[] args) {
 		List<Aplicant> listaAplicanti;
-		
+
 		System.out.println(Student.getFinantare());
 		System.out.println(Elev.getFinantare());
-		
+
 		try {
 			listaAplicanti = UniversalReader.readAplicants(new AngajatReader("angajati.txt"));
-			Proiect proiect =new Proiect(80);
-			for(Aplicant aplicant:listaAplicanti) {
+			Proiect proiect = new Proiect(80);
+			for (Aplicant aplicant : listaAplicanti) {
 				System.out.println(aplicant.toString());
 				System.out.println(aplicant.getSumaFinantata());
 				aplicant.afisareStatutProiect(proiect);
-			}			
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

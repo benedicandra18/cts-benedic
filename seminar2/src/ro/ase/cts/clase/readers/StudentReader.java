@@ -10,19 +10,20 @@ import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.clase.Student;
 
 public class StudentReader extends Reader {
-	
+
 	public StudentReader(String filename) {
 		super(filename);
 	}
 
-	//principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de cea concreta
+	// principiul depenedcy inversion : trebuie sa depinda de clasa abstracta, nu de
+	// cea concreta
 	public List<Aplicant> readAplicants() throws FileNotFoundException, NumberFormatException {
 		Scanner input = new Scanner(super.filename);
 		input.useDelimiter(",|\n");
 		List<Aplicant> studenti = new ArrayList<Aplicant>();
 
 		while (input.hasNext()) {
-			Student s=new Student();
+			Student s = new Student();
 			super.readAplicant(s, input);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
